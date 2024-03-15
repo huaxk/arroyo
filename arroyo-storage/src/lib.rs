@@ -58,7 +58,7 @@ const S3_VIRTUAL: &str =
 // S3://mybucket/puppy.jpg
 const S3_URL: &str = r"^[sS]3[aA]?://(?P<bucket>[a-z0-9\-\.]+)(/(?P<key>.+))?$";
 // unofficial, but convenient -- s3::https://my-endpoint.com:1234/mybucket/puppy.jpg
-const S3_ENDPOINT_URL: &str = r"^[sS]3[aA]?::(?<protocol>https?)://(?P<endpoint>[^:/]+):(?<port>\d+)/(?P<bucket>[a-z0-9\-\.]+)(/(?P<key>.+))?$";
+const S3_ENDPOINT_URL: &str = r"^[sS]3[aA]?::(?<protocol>https?)://(?P<endpoint>[^:/]+)(:(?<port>\d+))?/(?P<bucket>[a-z0-9\-\.]+)(/(?P<key>.+))?$";
 
 // file:///my/path/directory
 const FILE_URI: &str = r"^file://(?P<path>.*)$";
